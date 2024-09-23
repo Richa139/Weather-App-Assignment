@@ -1,0 +1,144 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f9fc; /* Soft light background */
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 400px; /* Limit width for better mobile view */
+  margin: 40px auto; /* Center and add spacing */
+  background-color: #ffffff; /* White background for content area */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  font-size: 2rem; /* Slightly smaller heading */
+  margin-bottom: 20px;
+  font-weight: 600; /* Slightly bolder */
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 20px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ddd; /* Gray background */
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #ffffff; /* White */
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4caf50; /* Green */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.loading-indicator {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px; /* Adjusted size */
+  color: #2196F3; /* Primary color */
+  font-weight: bold; /* Bold text */
+}
+
+.weather-card {
+  background-color: #f0f8ff; /* Light blue for cards */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 0; /* Space between cards */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #ccc; /* Separator line */
+}
+
+.forecast-item {
+  text-align: center;
+  flex: 1; /* Each item takes equal space */
+  padding: 5px; /* Padding for items */
+}
+
+.forecast-item img {
+  width: 50px; /* Set a fixed size for weather icons */
+  margin-top: 5px; /* Space above icon */
+}
+
+.forecast-item p {
+  margin: 0; /* Remove margin */
+  color: #555; /* Darker text for visibility */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .app {
+    padding: 20px; /* Less padding on smaller screens */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Smaller heading on mobile */
+  }
+
+  .weather-card {
+    padding: 15px; /* Less padding on cards */
+  }
+
+  .forecast {
+    flex-direction: column; /* Stack forecast items on small screens */
+  }
+
+  .forecast-item {
+    margin: 10px 0; /* Space between stacked items */
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.3rem; /* Even smaller heading for very small screens */
+  }
+
+  .slider {
+    width: 50px; /* Smaller toggle switch */
+  }
+}

@@ -1,0 +1,75 @@
+.forecast {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .forecast h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .forecast-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .forecast-item {
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #e7f3ff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 120px; /* Allow items to grow equally with a base size */
+    margin: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .forecast-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  
+  .day {
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+  .date {
+    color: #555;
+  }
+  
+  .temperature {
+    font-size: 1.2em;
+    margin: 5px 0;
+  }
+  
+  .weather-icon {
+    width: 60px; /* Set a fixed size for weather icons */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .forecast {
+      padding: 15px; /* Reduce padding on smaller screens */
+    }
+  
+    .forecast-items {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items */
+    }
+  
+    .forecast-item {
+      width: 90%; /* Make items take full width on small screens */
+      margin: 10px 0; /* Vertical margin between items */
+    }
+  
+    .weather-icon {
+      width: 50px; /* Set a fixed size for weather icons */
+    }
+  }
+  
