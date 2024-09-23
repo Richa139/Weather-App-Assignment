@@ -67,7 +67,6 @@
       width: 90%; /* Make items take full width on small screens */
       margin: 10px 0; /* Vertical margin between items */
     }
-  
     .weather-icon {
       width: 50px; /* Set a fixed size for weather icons */
     }
