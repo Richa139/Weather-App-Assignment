@@ -67,6 +67,10 @@
       width: 90%; /* Make items take full width on small screens */
       margin: 10px 0; /* Vertical margin between items */
     }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> f6b5d9d41728d9b1dd2b7b548081ec78e2b05fac
     .weather-icon {
       width: 50px; /* Set a fixed size for weather icons */
     }
