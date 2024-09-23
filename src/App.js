@@ -32,7 +32,7 @@ const App = () => {
 
   useEffect(() => {
     fetchWeatherData(city); // Fetch data for the default city on mount
-  }, [city, unit]);
+  }, [city, unit , fetchWeatherData ]);
 
   const toggleUnit = () => {
     setUnit((prevUnit) => (prevUnit === 'metric' ? 'imperial' : 'metric'));
